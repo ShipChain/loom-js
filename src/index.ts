@@ -19,6 +19,7 @@ export {
   SignedTronTxMiddleware,
   NonceTxMiddleware,
   CachedNonceTxMiddleware,
+  DerivedNonceTxMiddleware,
   SpeculativeNonceTxMiddleware,
   isInvalidTxNonceError
 } from './middleware'
