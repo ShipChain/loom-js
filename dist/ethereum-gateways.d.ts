@@ -35,7 +35,7 @@ export interface IEthereumGateway {
 }
 export declare class EthereumGatewayV1 implements IEthereumGateway {
     readonly contract: EthereumGatewayV1Contract;
-    readonly version: number;
+    readonly version: 1;
     constructor(contract: EthereumGatewayV1Contract);
     withdrawAsync(receipt: IWithdrawalReceipt, overrides?: TransactionOverrides): Promise<ethers.ContractTransaction>;
     depositERC20Async(amount: number | string | BN, contractAddress: string, overrides?: TransactionOverrides): Promise<ContractTransaction>;
@@ -44,7 +44,7 @@ export declare class EthereumGatewayV1 implements IEthereumGateway {
 export declare class EthereumGatewayV2 implements IEthereumGateway {
     readonly contract: EthereumGatewayV2Contract;
     private readonly vmc;
-    readonly version: number;
+    readonly version: 2;
     constructor(contract: EthereumGatewayV2Contract, vmc: ValidatorManagerContractV2);
     withdrawAsync(receipt: IWithdrawalReceipt, overrides?: TransactionOverrides): Promise<ethers.ContractTransaction>;
     depositERC20Async(amount: number | string | BN, contractAddress: string, overrides?: TransactionOverrides): Promise<ContractTransaction>;
